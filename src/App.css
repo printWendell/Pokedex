@@ -1,0 +1,37 @@
+/* Add variables(maybe some mixins) */
+
+/* body{
+  background-color: black;
+} */
+
+.App{
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* header{
+  background: url('./assets/images/pokedex-top.png');
+  background-repeat: no-repeat;
+} */
+
+header, footer{
+  background-color: red;
+  padding: 2em;
+}
+
+.container{
+  background-color: rgb(214, 248, 255);
+  padding: 3em;
+}
+
+@media screen and (max-width: 992px){
+  .App{
+    width: 90%
+  }
+}
+
+@media screen and (max-width: 768px){
+  .App{
+    width: 100%
+  }
+}
