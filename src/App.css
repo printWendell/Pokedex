@@ -4,8 +4,22 @@
   background-color: black;
 } */
 
+:root{
+  --main-color: rgb(247, 58, 0);
+  --main-container-color: rgb(214, 248, 255)
+}
+
+@font-face {
+  font-family: 'pokemon';
+  src: url('./assets/fonts/pokemon_solid-webfont.woff2') format('woff2'),
+       url('./assets/fonts/pokemon_solid-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 .App{
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -15,12 +29,12 @@
 } */
 
 header, footer{
-  background-color: red;
+  background-color: var(--main-color);
   padding: 2em;
 }
 
 .container{
-  background-color: rgb(214, 248, 255);
+  background-color: var(--main-container-color);
   padding: 3em;
 }
 

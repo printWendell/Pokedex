@@ -1,0 +1,13 @@
+.card{
+    background:#fff;
+    border: 2px solid Gainsboro;
+    border-radius: 20px;
+    font-family: pokemon;
+    letter-spacing: 4px;
+    margin: 2rem;
+    width: 210px;
+    text-align: center; 
+    text-transform: capitalize; 
+   
+
+}
