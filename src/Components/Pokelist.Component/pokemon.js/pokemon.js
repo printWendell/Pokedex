@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './pokemon.css'
+import {TypeNames } from './Types.Component/types'
 
 function Pokemon({ name, id }) {
     // props from pokelist component
     const [pokemon, setPokemon] = useState([])
+
 
     useEffect(() =>{
      getOnePokemon()   
@@ -19,11 +21,10 @@ function Pokemon({ name, id }) {
     //     return string.charAt(0).toUpperCase() + string.slice(1)
     // }
 
-    // console.log(pokemon)
 
     return (
         <div className="card">
-            <p>#{pokemon.id}</p>
+            <p className="order">#{pokemon.id}</p>
             <h2>{name}</h2>
             <div className="img">
                 {
@@ -32,6 +33,7 @@ function Pokemon({ name, id }) {
                     
                 }
             </div>
+            <TypeNames id={pokemon.id}/>
         </div>
     )
 }

@@ -33,11 +33,11 @@ function PokeList() {
             <div className="pokelist">
 
 
-            {
-                name.map(name=>(
-                    <Pokemon  key={name.id} name={name.name} id={name.id}/>
-                ))
-            }  
+                {
+                    name.map(name=>(
+                        <Pokemon  key={name.id} name={name.name} id={name.id}/>
+                    ))
+                }  
             
             </div>
 

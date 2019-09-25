@@ -5,18 +5,14 @@
 }
 
 .pokelist {
-    padding: 0;
-    
-    
+    padding: 0;   
     display: -webkit-box;   
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    display: flex;
-    
+    display: flex;    
     flex-flow: row wrap;
-    justify-content: space-around;
-       
+    justify-content: space-around;       
   }
   
   .btn{
@@ -35,5 +31,5 @@
 .btn:hover{
     background: #fff;
     color: var(--main-color);
-    transition: 0.3s;
+    transition: 0.3s ease-in-out
 }

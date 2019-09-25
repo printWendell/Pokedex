@@ -8,6 +8,34 @@
     width: 210px;
     text-align: center; 
     text-transform: capitalize; 
-   
 
+    /* box shadow */
+    --webkit-box-shadow: 8px 9px 5px -4px rgba(196,196,196,0.58);
+    --moz-box-shadow: 8px 9px 5px -4px rgba(196,196,196,0.58);
+    box-shadow: 8px 9px 5px -4px rgba(196,196,196,0.58);
 }
+
+.order{
+    color:rgb(197, 204, 214);
+}
+
+img{
+    width: 8rem;
+}
+
+@keyframes bounce { 
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+  }
+
+  .card:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    
+  }
+  
+  .card:hover > .img{
+    animation: bounce 0.17s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
