@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './pokemon.css'
-import {TypeNames } from './Types.Component/types'
+import { Types } from './Types.Component/types'
 
-function Pokemon({ name, id }) {
+function Pokemon({ name }) {
     // props from pokelist component
     const [pokemon, setPokemon] = useState([])
+    const [type, setType] = useState([])
+
 
 
     useEffect(() =>{
@@ -14,13 +16,9 @@ function Pokemon({ name, id }) {
     const getOnePokemon = async () => {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
         const data = await res.json()
-        setPokemon(data)        
+        setPokemon(data)
+        setType(data.types)      
     }
-
-    // const upperCase = ({name}) => {
-    //     return string.charAt(0).toUpperCase() + string.slice(1)
-    // }
-
 
     return (
         <div className="card">
@@ -33,7 +31,11 @@ function Pokemon({ name, id }) {
                     
                 }
             </div>
-            <TypeNames id={pokemon.id}/>
+            {
+                type.map(type => (
+                    <Types types= {type}/>
+                ))
+            }
         </div>
     )
 }

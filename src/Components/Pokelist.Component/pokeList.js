@@ -29,7 +29,7 @@ function PokeList() {
       }
      
     return (
-        <React.Fragment className="container">
+        <div className="container">
             <div className="pokelist">
 
 
@@ -38,7 +38,7 @@ function PokeList() {
                         <Pokemon  key={name.id} name={name.name} id={name.id}/>
                     ))
                 }  
-            
+                
             </div>
 
             <button className="btn" onClick={() => {
@@ -48,8 +48,8 @@ function PokeList() {
             }>LOAD MORE</button>
 
            
+        </div>
 
-        </React.Fragment>
     )
 }
 
